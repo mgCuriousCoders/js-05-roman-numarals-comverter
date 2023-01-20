@@ -5,8 +5,6 @@ const resetBtn=document.getElementById("reset")
  const copyRight=document.querySelector("footer");
 const year= new Date().getFullYear();
 
-
-
  let result = "";
    const romanString = [
   "M",
@@ -23,6 +21,9 @@ const year= new Date().getFullYear();
   "IV",
   "I",
 ];
+const romanInt = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+
+//? fonction intToRoman
 const intToRoman = (year) => {
  
   for (let i = 0; i < romanInt.length; i++) {
@@ -33,7 +34,8 @@ const intToRoman = (year) => {
   }
   return result;
 };
-const romanInt = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+
+
 convertBtn.addEventListener("click",()=>{
     intToRoman(latinNumber.value)
     romanNumberResult.value=result;
